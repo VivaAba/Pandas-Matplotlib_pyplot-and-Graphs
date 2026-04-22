@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("weather.csv")
+
+plt.figure(figsize=(10,7.5), num=("Weather1"))
+plt.bar(df["Month"],df["Temperature"], color ="Gray")
+plt.xlabel("Months")
+plt.ylabel("Temperature")
+plt.title("Weather")
+
+plt.figure(figsize=(10,7.5), num=("Weather2"))
+plt.barh(df["Month"],df["Temperature"], color ="Gray")
+plt.xlabel("Temperature")
+plt.ylabel("Months")
+plt.title("Weather")
+
+plt.figure(figsize=(10,7.5), num=("Weather3"))
+plt.plot(df["Month"],df["Temperature"], marker ="o", color ="Gray")
+plt.xlabel("Months")
+plt.ylabel("Temperature")
+plt.title("Weather")
+
+plt.show()
